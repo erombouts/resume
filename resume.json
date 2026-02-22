@@ -1,0 +1,526 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Elco Rombouts",
+    "label": "Product Owner, Business Analyst / Architect",
+    "image": "",
+    "email": "",
+    "phone": "",
+    "url": "",
+    "summary": "Elco is een pragmatisch ingestelde en resultaatgerichte senior productowner / business analist die in staat is leiding en richting te geven aan complexe omgevingen zowel op inhoud als de mensen binnen het programma. Met meer als 25 jaar ervaring in het software ontwikkelingsdomein heeft hij een brede kennis opgebouwd van de gehele ontwikkelketen. Hij is een betrokken, doelgerichte teamspeler die probleemoplossend handelt en vanuit een helicopterview samenhang inzichtelijk kan maken en daarmee in staat is bruggen te slaan tussen organisatieonderdelen, partners en leveranciers. Hij werkt sinds 2006 op basis van de agile/scrum aanpak en gelooft sterk in de onderliggende agile en lean principes. Zijn belangrijkste missie is om organisaties te helpen meer plezier en waarde te halen uit haar mensen en IT activiteiten.",
+    "location": {
+      "city": "Best",
+      "countryCode": "NL",
+      "region": ""
+    },
+    "profiles": []
+  },
+  "work": [
+    {
+      "name": "Sanoma Learning",
+      "position": "Product Owner",
+      "url": "",
+      "startDate": "2023-09",
+      "endDate": "2024-12",
+      "summary": "Aansluiting Sanoma Nordics - Parallel aan de activiteiten voor Sanoma Italy is het process in gang gezet om Sanoma Nordics aan te sluiten op Sesame. Dit wordt uitgevoerd in twee stappen. Eerst de aansluiting van Sanoma Utbildning (Zweden) en daarna Sanoma Pro (Finland).",
+      "highlights": [
+        "Zorggedragen voor het uitdragen van de visie en werking van Sesame",
+        "Functionele architectuur opgesteld",
+        "Eisen en wensen uitgewerkt met analisten en ontwikkelteams",
+        "Nieuwe manier van werken met Sesame systeem geïntroduceerd"
+      ]
+    },
+    {
+      "name": "Sanoma Learning",
+      "position": "Product Owner",
+      "url": "",
+      "startDate": "2022-03",
+      "endDate": "2024-07",
+      "summary": "Sanoma Learning heeft de Italiaanse activiteiten van Pearson overgenomen. Verantwoordelijk voor het vervangen van gebruikers- en producttoegang door de Sesame oplossing voor Sanoma Italy.",
+      "highlights": [
+        "Betrokken bij acquisitie proces voor beoordeling as-is situatie",
+        "Ontwikkelteam in capaciteit verdubbeld",
+        "Migratie van gebruikers- en licentiegegevens van Pearson naar Sanoma Learning",
+        "Succesvolle ontvlechting en aansluiting Italiaanse activiteiten"
+      ]
+    },
+    {
+      "name": "Sanoma Learning",
+      "position": "Product Owner",
+      "url": "",
+      "startDate": "2021-11",
+      "endDate": "2023-10",
+      "summary": "Realisatie Sesame fase 2, introductie school data. Sesame uitgebreid met applicatie voor beheren van school data en nieuw service portaal voor schoolbeheerders.",
+      "highlights": [
+        "Afstemming met leveranciers van schoolmanagementsystemen in België",
+        "Automatisch ontsluiten van school data voor Sesame",
+        "Ontwikkeling nieuw service portaal voor schoolbeheerders",
+        "Vertaling van eisen en wensen naar centrale SL-oplossing"
+      ]
+    },
+    {
+      "name": "Sanoma Learning",
+      "position": "Product Owner",
+      "url": "",
+      "startDate": "2019-04",
+      "endDate": "2021-10",
+      "summary": "Realisatie Sesame fase 1, uitrol VAN IN SE. Verantwoordelijk voor de realisatie van Sesame, de nieuwe centrale oplossing voor gebruikers- en producttoegang voor Secundair onderwijs in België.",
+      "highlights": [
+        "Nieuw ontwikkelteam opgezet in Polen",
+        "Visie en functionele delen van Sesame gedefinieerd",
+        "Succesvolle implementatie en uitrol in augustus 2021",
+        "Migratie van oude gebruikers- en licentiegegevens naar Sesame",
+        "Integratie met 20-tal digitale leeromgevingen",
+        "Portaal gecreëerd voor klantendienst/helpdesk"
+      ]
+    },
+    {
+      "name": "Sanoma Learning",
+      "position": "Business Analyst / Product Owner",
+      "url": "",
+      "startDate": "2019-08",
+      "endDate": "2020-03",
+      "summary": "Harmonisatie van lokale CIAM en product licentie oplossingen naar centrale diensten binnen Sanoma Learning organisatie.",
+      "highlights": [
+        "Inventariseren van eisen en wensen van verschillende SL-onderdelen",
+        "Pakket selectie voor vereiste CIAM diensten",
+        "Opstellen en valideren van business case"
+      ]
+    },
+    {
+      "name": "Nederlandse Voedsel & Waren Autoriteit (NVWA)",
+      "position": "Senior Business Architect",
+      "url": "",
+      "startDate": "2017-09",
+      "endDate": "2019-05",
+      "summary": "Programma Blik 2020 - Alle organisatie specifieke applicaties worden ondergebracht in nieuw applicatie landschap onder de naam Inspect. 23 primaire processen worden omgebogen tot 'het nieuwe werken'.",
+      "highlights": [
+        "Borging van de architectuur binnen SAFe release train",
+        "Ondersteuning van (deel)productowners bij invullen functionaliteiten",
+        "Basisvoorziening en domein-specifieke oplossingen (horeca, tabak, keuren slacht, etc.)"
+      ]
+    },
+    {
+      "name": "Anva",
+      "position": "Product Owner, Senior Business Architect",
+      "url": "",
+      "startDate": "2016-06",
+      "endDate": "2017-08",
+      "summary": "Programma AnvaRules - Vervanging legacy backoffice en CRM applicaties door DCM-oplossing binnen multi-tenant micro-service georiënteerd platform.",
+      "highlights": [
+        "Opzet organisatie met bijbehorende aanpak",
+        "Sturing gegeven aan gewenste functionele scope",
+        "Vertaling business doelstellingen naar organisatie architectuur",
+        "Eerste nieuwe propositie naar markt gebracht in lange tijd"
+      ]
+    },
+    {
+      "name": "Obvion",
+      "position": "Product Owner, Senior Business Architect",
+      "url": "",
+      "startDate": "2015-09",
+      "endDate": "2016-05",
+      "summary": "Programma Online - Uitbreiding portaalomgeving voor adviseurs en ontwikkeling online omgeving voor eindklanten.",
+      "highlights": [
+        "Definiëren functionele scope in product backlog",
+        "Stakeholder management voor eisen/wensen",
+        "Uitbreiding portaal met nieuwe functionaliteit"
+      ]
+    },
+    {
+      "name": "Obvion",
+      "position": "Product Owner, Senior Business Architect",
+      "url": "",
+      "startDate": "2014-08",
+      "endDate": "2015-08",
+      "summary": "Programma Fenix - Vernieuwing en uitbreiding portaal voor adviseurs en eindklanten.",
+      "highlights": [
+        "Opstellen architectuur richtlijnen",
+        "Definiëren functionele scope",
+        "Vaststellen Agile/Scrum aanpak"
+      ]
+    },
+    {
+      "name": "ABN AMRO Lease",
+      "position": "Agile Consultant/Coach",
+      "url": "",
+      "startDate": "2013-12",
+      "endDate": "2014-07",
+      "summary": "Verandertraject voor gehele ontwikkelafdeling (40 fte) van traditionele waterval methode naar Scrum aanpak.",
+      "highlights": [
+        "Opleiden productowners en scrummasters",
+        "Voorbereiden en creëren voorwaarden voor Scrum aanpak",
+        "On-the-job begeleiding van vier teams",
+        "Teams werkten na half jaar in stabiele cadans volgens Scrum"
+      ]
+    },
+    {
+      "name": "SNS Bank",
+      "position": "Senior Business Architect",
+      "url": "",
+      "startDate": "2013-09",
+      "endDate": "2013-12",
+      "summary": "Roadmap 2017-2020 voor het hypothekenbedrijf. Onderzoek naar inrichting hypothekenbedrijf vanwege versnipperd en verouderd IT-landschap.",
+      "highlights": [
+        "Harmonisatie procesondersteuning",
+        "Voorstel voor componentiseren applicatie landschap",
+        "Ontvlechting backoffice"
+      ]
+    },
+    {
+      "name": "PinkRoccade Local Government",
+      "position": "Agile Coach, Senior Business Architect",
+      "url": "",
+      "startDate": "2011-12",
+      "endDate": "2013-08",
+      "summary": "Programma iBurgerzaken (voorheen GaaS) - Multi-tenant/cloud oplossing als geïntegreerde front & midoffice oplossing voor gemeenten.",
+      "highlights": [
+        "Introductie Scrum als projectaanpak",
+        "Scrum master voor ontwikkelteam en productowner",
+        "Opschalen organisatie naar vier Scrum teams",
+        "Nearshoring met zusterorganisatie Yonder",
+        "Opzet en realisatie functionele architectuur GaaS oplossing"
+      ]
+    },
+    {
+      "name": "Anva",
+      "position": "Senior Business Architect",
+      "url": "",
+      "startDate": "2011-10",
+      "endDate": "2013-03",
+      "summary": "Project Rekenmodule - Gefaseerde uitbreiding/vervanging systeemhuispakket door componenten op basis van Aquima BPM-suite.",
+      "highlights": [
+        "Conceptuele en functionele opzet regel gebaseerde architectuur",
+        "Mentor/coach voor Anva team bij uitwerking oplossing"
+      ]
+    },
+    {
+      "name": "Novay/Everest",
+      "position": "Agile Consultant/Coach",
+      "url": "",
+      "startDate": "2011-05",
+      "endDate": "2011-11",
+      "summary": "Programma ASD - Samenwerking tussen universiteiten, dienstverleners en afnemers aan aanpak voor Agile Service Development.",
+      "highlights": [
+        "Medewerking aan 'The way of working' track",
+        "Inventariseren situationele factoren voor selectie agile practices",
+        "Basis voor aanpak ontwerpen en inrichten agile diensten"
+      ]
+    },
+    {
+      "name": "Everest",
+      "position": "Agile Consultant, Project Leader",
+      "url": "",
+      "startDate": "2010-09",
+      "endDate": "2011-09",
+      "summary": "Project Kwaliteit & Testmanagement - Centrale visie en aanpak voor kwaliteit en testen vanuit Agile/Scrum perspectief.",
+      "highlights": [
+        "Formuleren testvisie met bijbehorende aanpak",
+        "Introductie binnen organisatie",
+        "Selectie en implementatie applicatie voor automatisch testen"
+      ]
+    },
+    {
+      "name": "Everest",
+      "position": "Product Owner, Business Architect",
+      "url": "",
+      "startDate": "2007-06",
+      "endDate": "2011-09",
+      "summary": "Product EMS Hypotheken - Realisatie en levering Everest Mortgage Solution pakket voor hypotheken midoffice bedrijf.",
+      "highlights": [
+        "Aansturen productdevelopmentteam",
+        "Introductie en implementatie Scrum als projectaanpak",
+        "Opstellen en bewaken proces- en applicatiearchitectuur"
+      ]
+    },
+    {
+      "name": "SNS Bank",
+      "position": "Business Architect",
+      "url": "",
+      "startDate": "2006-01",
+      "endDate": "2007-05",
+      "summary": "Programma Hysys - Realisatie hypothekenmidoffice voor verwerken hypotheekaanvragen (voorloper EMS).",
+      "highlights": [
+        "Opstellen proces- en informatiearchitectuur",
+        "Afstemming met klant",
+        "Requirements en ontwerpen voor deelfuncties"
+      ]
+    },
+    {
+      "name": "Stater",
+      "position": "Business Engineer",
+      "url": "",
+      "startDate": "2005-01",
+      "endDate": "2005-12",
+      "summary": "Programma €State - Realisatie hypothekenmidoffice voor verwerken hypotheekaanvragen.",
+      "highlights": [
+        "Opstellen requirements en ontwerpen",
+        "Ontwerp en realisatie workflow- en procesbesturingcomponent",
+        "Basis voor procesbesturingscomponent in latere systemen"
+      ]
+    },
+    {
+      "name": "Nationale-Nederlanden",
+      "position": "Business Engineer, Team Leader",
+      "url": "",
+      "startDate": "2002-09",
+      "endDate": "2004-12",
+      "summary": "Project Vervanging Commerciële Software - Vervanging MS-DOS applicatie door productmodel gebaseerde client applicatie op basis van Knowledge Framework.",
+      "highlights": [
+        "Analyse en realisatie verzekeringsproducten",
+        "Teamleider voor ontwikkelteam"
+      ]
+    },
+    {
+      "name": "Well-o-Well (Nationale-Nederlanden)",
+      "position": "Business Engineer, Team Leader",
+      "url": "",
+      "startDate": "2000-04",
+      "endDate": "2002-08",
+      "summary": "Digitaal intermediair kanaal op internet voor premie vergelijkingen en afsluiten verzekerings- en hypothecaire producten.",
+      "highlights": [
+        "Analyse en ontwerp rekenboxen",
+        "Integratie verschillende systemen",
+        "Backend component op basis van record en playback"
+      ]
+    },
+    {
+      "name": "Philips Lightning Oss",
+      "position": "Software Developer",
+      "url": "",
+      "startDate": "1998-01",
+      "endDate": "1999-12",
+      "summary": "Softwareontwikkeling voor voorraad beheersing van productielijnen. Software produceerde benodigde lading van plaatsingsmachines en bewaakte bevoorrading productielijn.",
+      "highlights": [
+        "Beheer en doorvoeren wijzigingen op productiesoftware"
+      ]
+    },
+    {
+      "name": "Philips Medical Systems",
+      "position": "Software Developer, Functional Administrator",
+      "url": "",
+      "startDate": "1997-01",
+      "endDate": "1998-12",
+      "summary": "Project ClearDDTS - Issue management systeem voor ontwikkelproces MR en CT scanners.",
+      "highlights": [
+        "Dagelijks beheer DDTS systeem",
+        "Herontwerp en implementatie workflowcomponent"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Kenniscentrum Cibit Utrecht",
+      "url": "",
+      "area": "Information & Knowledge Technology",
+      "studyType": "Master",
+      "startDate": "1999-01",
+      "endDate": "2000-06",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Hogeschool Eindhoven",
+      "url": "",
+      "area": "Elektrotechniek, differentiatie ECIM (Electronic Computer Integrated Manufacturing)",
+      "studyType": "Bachelor",
+      "startDate": "1991-09",
+      "endDate": "1997-01",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "ST. Odulphuslyceum Tilburg",
+      "url": "",
+      "area": "",
+      "studyType": "HAVO",
+      "startDate": "1985-09",
+      "endDate": "1991-06",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Bootcamp Generative AI",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Scrum Patterns",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Holacracy",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Nexus (Scaled Scrum)",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Leading SAFe (Certified Scaled Agilist)",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Business Process Management",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Innovation Games (Certified Collaboration Architect)",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Masterclass Hypotheken",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Enterprise Architecture (HU)",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "CSA Leadership Program",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Management 3.0",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Qualify/TestDrive, Original Software",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Professional Product Owner (PSO)",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Professional Scrum Master (PSM)",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "High Potential Traject",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Coaching",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Communicatieve Vaardigheden",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Gespreks- en Presentatie-Technieken",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Onderhandelen",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Agile/Scrum Training",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Agile Methodologies",
+      "level": "Expert",
+      "keywords": [
+        "Agile",
+        "Scrum",
+        "Lean",
+        "Kanban",
+        "SAFe",
+        "LeSS",
+        "Nexus"
+      ]
+    },
+    {
+      "name": "Architecture",
+      "level": "Expert",
+      "keywords": [
+        "Enterprise Architecture",
+        "Business Process Management",
+        "Information Management",
+        "Microservice Architecture"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Advanced",
+      "keywords": [
+        "Continuous Integration",
+        "Continuous Delivery"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Dutch",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional working proficiency"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Market & Industry Experience",
+      "keywords": [
+        "Edutech",
+        "Insurance",
+        "Banking",
+        "Government",
+        "Industry"
+      ]
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2024-11-01",
+    "theme": "elegant"
+  }
+}
