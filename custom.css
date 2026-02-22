@@ -1,0 +1,95 @@
+/* Additional styling for your resume */
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.resume {
+    background: white;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 2.5em;
+}
+
+.header h2 {
+    margin: 10px 0;
+    color: #7f8c8d;
+    font-weight: 300;
+}
+
+.summary {
+    margin: 20px 0;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+section {
+    margin-top: 30px;
+}
+
+section h3 {
+    color: #2c3e50;
+    border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.work-item, .education-item {
+    margin-bottom: 25px;
+}
+
+.work-item h4, .education-item h4 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.date {
+    color: #7f8c8d;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.work-item ul {
+    margin-top: 10px;
+}
+
+.work-item li {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-item h4 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+}
+
+@media print {
+    body {
+        background: white;
+        max-width: 100%;
+    }
+    
+    .resume {
+        box-shadow: none;
+        padding: 20px;
+    }
+}
