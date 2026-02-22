@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elco Rombouts - Product Owner & Business Architect</title>
+    <link rel="stylesheet" href="style-tfg.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <!-- Profile Photo -->
+                <div class="profile-section" id="profile-photo">
+                    <!-- Photo will be inserted by JavaScript if available -->
+                </div>
+
+                <!-- Contact Information -->
+                <section class="sidebar-section">
+                    <h3 class="sidebar-title">Contact</h3>
+                    <div id="contact-info" class="contact-list">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="sidebar-section">
+                    <h3 class="sidebar-title">Vaardigheden</h3>
+                    <div id="skills-sidebar" class="skills-list">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Languages -->
+                <section class="sidebar-section">
+                    <h3 class="sidebar-title">Talen</h3>
+                    <div id="languages" class="languages-list">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="sidebar-section">
+                    <h3 class="sidebar-title">Opleiding</h3>
+                    <div id="education-sidebar" class="education-list">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </section>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h1 class="name" id="name">Loading...</h1>
+                <h2 class="title" id="job-title">Loading...</h2>
+            </header>
+
+            <!-- Profile/Summary -->
+            <section class="content-section" id="profile-section">
+                <h3 class="section-title">Profiel</h3>
+                <div id="summary" class="summary-text">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Work Experience -->
+            <section class="content-section">
+                <h3 class="section-title">Werkervaring</h3>
+                <div id="work-experience" class="experience-list">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section class="content-section" id="certificates-section">
+                <h3 class="section-title">Certificeringen</h3>
+                <div id="certificates" class="certificates-grid">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Projects (if any) -->
+            <section class="content-section" id="projects-section" style="display: none;">
+                <h3 class="section-title">Projecten</h3>
+                <div id="projects" class="projects-list">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Load resume.json
+        console.log('Starting to load resume.json...');
+        
+        fetch('resume.json')
+            .then(response => {
+                console.log('Fetch response:', response.status, response.statusText);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(resume => {
+                console.log('Resume loaded successfully:', resume);
+                renderResume(resume);
+            })
+            .catch(error => {
+                console.error('Error loading resume:', error);
+                
+                // Show user-friendly error message
+                const errorHTML = `
+                    <div class="error" style="padding: 40px; text-align: center; max-width: 600px; margin: 50px auto;">
+                        <h2 style="color: #c00; margin-bottom: 20px;">⚠️ Error Loading Resume</h2>
+                        <p style="margin-bottom: 20px;"><strong>Error:</strong> ${error.message}</p>
+                        <div style="background: #fff3cd; padding: 20px; border-radius: 8px; text-align: left; margin-top: 20px;">
+                            <h3 style="margin-top: 0;">Common Solutions:</h3>
+                            <ol style="line-height: 1.8;">
+                                <li><strong>Testing Locally?</strong> You need to run a local server. Browsers block file:// access for security.
+                                    <br><code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">python3 -m http.server 8000</code>
+                                    <br>Then open: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">http://localhost:8000</code>
+                                </li>
+                                <li><strong>File Missing?</strong> Make sure <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">resume.json</code> is in the same folder as this HTML file.</li>
+                                <li><strong>JSON Error?</strong> Validate your JSON at <a href="https://jsonlint.com" target="_blank">jsonlint.com</a></li>
+                                <li><strong>On GitHub Pages?</strong> Make sure all files are uploaded and the site is enabled in Settings.</li>
+                            </ol>
+                        </div>
+                        <p style="margin-top: 20px; font-size: 0.9em; color: #666;">
+                            Open browser console (F12) for more details.
+                        </p>
+                    </div>
+                `;
+                document.querySelector('.resume-container').innerHTML = errorHTML;
+            });
+
+        function renderResume(resume) {
+            const { basics, work, education, skills, certificates, languages, projects } = resume;
+
+            // Header
+            document.getElementById('name').textContent = basics?.name || 'Name Missing';
+            document.getElementById('job-title').textContent = basics?.label || 'Title Missing';
+
+            // Profile Photo
+            if (basics?.image) {
+                document.getElementById('profile-photo').innerHTML = `
+                    <img src="${basics.image}" alt="${basics.name}" class="profile-image" 
+                         onerror="this.style.display='none'">
+                `;
+            }
+
+            // Contact Info in Sidebar
+            let contactHTML = '';
+            
+            if (basics?.location?.city) {
+                contactHTML += `
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>${basics.location.city}${basics.location.countryCode ? ', ' + basics.location.countryCode : ''}</span>
+                    </div>
+                `;
+            }
+
+            if (basics?.phone) {
+                contactHTML += `
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <a href="tel:${basics.phone}">${basics.phone}</a>
+                    </div>
+                `;
+            }
+
+            if (basics?.email) {
+                contactHTML += `
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="mailto:${basics.email}">${basics.email}</a>
+                    </div>
+                `;
+            }
+
+            if (basics?.url) {
+                contactHTML += `
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <a href="${basics.url}" target="_blank">${basics.url.replace('https://', '').replace('http://', '')}</a>
+                    </div>
+                `;
+            }
+
+            if (basics?.profiles && basics.profiles.length > 0) {
+                basics.profiles.forEach(profile => {
+                    contactHTML += `
+                        <div class="contact-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            <a href="${profile.url}" target="_blank">${profile.network}</a>
+                        </div>
+                    `;
+                });
+            }
+
+            document.getElementById('contact-info').innerHTML = contactHTML || '<p style="color: #999;">No contact info</p>';
+
+            // Summary
+            if (basics?.summary) {
+                document.getElementById('summary').innerHTML = `<p>${basics.summary}</p>`;
+            }
+
+            // Skills in Sidebar
+            if (skills && skills.length > 0) {
+                const skillsHTML = skills.map(skill => `
+                    <div class="skill-item">
+                        <h4 class="skill-name">${skill.name}</h4>
+                        ${skill.keywords && skill.keywords.length > 0 ? `
+                            <div class="skill-keywords">
+                                ${skill.keywords.slice(0, 6).map(k => `<span class="skill-tag">${k}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `).join('');
+                document.getElementById('skills-sidebar').innerHTML = skillsHTML;
+            }
+
+            // Languages
+            if (languages && languages.length > 0) {
+                const languagesHTML = languages.map(lang => `
+                    <div class="language-item">
+                        <span class="language-name">${lang.language}</span>
+                        ${lang.fluency ? `<span class="language-level">${lang.fluency}</span>` : ''}
+                    </div>
+                `).join('');
+                document.getElementById('languages').innerHTML = languagesHTML;
+            }
+
+            // Education in Sidebar
+            if (education && education.length > 0) {
+                const educationHTML = education.map(edu => `
+                    <div class="education-item">
+                        <div class="edu-period">${formatYear(edu.startDate)} - ${formatYear(edu.endDate)}</div>
+                        <h4 class="edu-degree">${edu.studyType || 'Degree'}</h4>
+                        ${edu.area ? `<div class="edu-area">${edu.area}</div>` : ''}
+                        <div class="edu-institution">${edu.institution}</div>
+                    </div>
+                `).join('');
+                document.getElementById('education-sidebar').innerHTML = educationHTML;
+            }
+
+            // Work Experience
+            if (work && work.length > 0) {
+                const workHTML = work.map(job => `
+                    <article class="work-item">
+                        <div class="work-header">
+                            <div class="work-title-section">
+                                <h4 class="work-position">${job.position || 'Position'}</h4>
+                                <div class="work-company">${job.name || 'Company'}</div>
+                            </div>
+                            <div class="work-period">
+                                ${formatDate(job.startDate)} - ${job.endDate ? formatDate(job.endDate) : 'Heden'}
+                            </div>
+                        </div>
+                        ${job.summary ? `<p class="work-summary">${job.summary}</p>` : ''}
+                        ${job.highlights && job.highlights.length > 0 ? `
+                            <ul class="work-highlights">
+                                ${job.highlights.map(h => `<li>${h}</li>`).join('')}
+                            </ul>
+                        ` : ''}
+                    </article>
+                `).join('');
+                document.getElementById('work-experience').innerHTML = workHTML;
+            }
+
+            // Certificates
+            if (certificates && certificates.length > 0) {
+                const certificatesHTML = certificates.map(cert => `
+                    <div class="certificate-badge">
+                        <div class="cert-icon">✓</div>
+                        <div class="cert-name">${cert.name}</div>
+                    </div>
+                `).join('');
+                document.getElementById('certificates').innerHTML = certificatesHTML;
+            }
+
+            // Projects (if any)
+            if (projects && projects.length > 0) {
+                document.getElementById('projects-section').style.display = 'block';
+                const projectsHTML = projects.map(project => `
+                    <article class="project-item">
+                        <h4 class="project-name">${project.name}</h4>
+                        ${project.description ? `<p class="project-description">${project.description}</p>` : ''}
+                        ${project.highlights && project.highlights.length > 0 ? `
+                            <ul class="project-highlights">
+                                ${project.highlights.map(h => `<li>${h}</li>`).join('')}
+                            </ul>
+                        ` : ''}
+                    </article>
+                `).join('');
+                document.getElementById('projects').innerHTML = projectsHTML;
+            }
+
+            console.log('Resume rendered successfully!');
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return '';
+            try {
+                const date = new Date(dateString);
+                const options = { year: 'numeric', month: 'short' };
+                return date.toLocaleDateString('nl-NL', options);
+            } catch (e) {
+                return dateString;
+            }
+        }
+
+        function formatYear(dateString) {
+            if (!dateString) return '';
+            try {
+                const date = new Date(dateString);
+                return date.getFullYear();
+            } catch (e) {
+                return dateString;
+            }
+        }
+    </script>
+</body>
+</html>
