@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elco Rombouts - Resume</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        #loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1.2em;
+            color: #666;
+        }
+        #resume {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">Loading resume...</div>
+    <div id="resume"></div>
+
+    <script>
+        // Configuration - CHANGE THEME HERE
+        const THEME = 'kendall'; // Options: elegant, kendall, even, stackoverflow, flat, etc.
+        const GITHUB_USERNAME = 'erombouts'; // CHANGE THIS!
+
+        // Fetch resume.json
+        fetch('resume.json')
+            .then(response => response.json())
+            .then(resumeData => {
+                // Load the theme CSS
+                const themeCSS = document.createElement('link');
+                themeCSS.rel = 'stylesheet';
+                themeCSS.href = `https://cdn.jsdelivr.net/npm/jsonresume-theme-${THEME}@latest/style.css`;
+                document.head.appendChild(themeCSS);
+
+                // Generate HTML from resume data
+                generateResumeHTML(resumeData);
+                
+                // Hide loading, show resume
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('resume').style.display = 'block';
+            })
+            .catch(error => {
+                document.getElementById('loading').innerHTML = 'Error loading resume. Please check console.';
+                console.error('Error:', error);
+            });
+
+        // Simple HTML generator (works with most themes)
+        function generateResumeHTML(data) {
+            const resumeDiv = document.getElementById('resume');
+            
+            let html = `
+                <div class="resume">
+                    <header class="header">
+                        <h1>${data.basics.name}</h1>
+                        <h2>${data.basics.label}</h2>
+                        ${data.basics.summary ? `<p class="summary">${data.basics.summary}</p>` : ''}
+                        <div class="contact">
+                            ${data.basics.email ? `<p>Email: ${data.basics.email}</p>` : ''}
+                            ${data.basics.phone ? `<p>Phone: ${data.basics.phone}</p>` : ''}
+                            ${data.basics.location ? `<p>Location: ${data.basics.location.city}, ${data.basics.location.countryCode}</p>` : ''}
+                        </div>
+                    </header>
+
+                    <section class="work">
+                        <h3>Work Experience</h3>
+                        ${data.work.map(job => `
+                            <div class="work-item">
+                                <h4>${job.position} - ${job.name}</h4>
+                                <p class="date">${job.startDate} - ${job.endDate || 'Present'}</p>
+                                <p>${job.summary}</p>
+                                ${job.highlights && job.highlights.length > 0 ? `
+                                    <ul>
+                                        ${job.highlights.map(h => `<li>${h}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                            </div>
+                        `).join('')}
+                    </section>
+
+                    <section class="education">
+                        <h3>Education</h3>
+                        ${data.education.map(edu => `
+                            <div class="education-item">
+                                <h4>${edu.studyType} - ${edu.area}</h4>
+                                <p>${edu.institution}</p>
+                                <p class="date">${edu.startDate} - ${edu.endDate}</p>
+                            </div>
+                        `).join('')}
+                    </section>
+
+                    ${data.skills && data.skills.length > 0 ? `
+                        <section class="skills">
+                            <h3>Skills</h3>
+                            ${data.skills.map(skill => `
+                                <div class="skill-item">
+                                    <h4>${skill.name}</h4>
+                                    <p>${skill.keywords.join(', ')}</p>
+                                </div>
+                            `).join('')}
+                        </section>
+                    ` : ''}
+
+                    ${data.certificates && data.certificates.length > 0 ? `
+                        <section class="certificates">
+                            <h3>Certificates</h3>
+                            <ul>
+                                ${data.certificates.map(cert => `<li>${cert.name}</li>`).join('')}
+                            </ul>
+                        </section>
+                    ` : ''}
+                </div>
+            `;
+            
+            resumeDiv.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
